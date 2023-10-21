@@ -1,8 +1,8 @@
 <?php
 
-class SiteController {
-    public function index()
+class SiteController extends Controller{
+    public function index () 
     {
-        echo "olá";
+        $this->prepareSite("index");
     }
 }

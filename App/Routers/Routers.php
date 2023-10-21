@@ -60,11 +60,13 @@ class Routers {
     {
         $allowedControllers = [
             'SiteController', 
-            'LoginController'
+            'LoginController',
+            'AdministrativoController'
         ];
         $allowedMethods = [
             'index',
-            'auth'
+            'auth',
+            'logouf'
         ];
 
         $controllerPath = $this->getControllerPath($this->controller);

@@ -8,6 +8,7 @@ class LoginController extends Controller{
     public function __construct()
     {
         $this->loginModel = new LoginModel();
+        $this->prepareDashboard();
     }
 
     public function index()
