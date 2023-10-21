@@ -1,0 +1,58 @@
+body{
+    font-family: Arial, Helvetica;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login{
+    width: 300px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.login input{
+    width: 100%;
+    padding: 10px;
+    margin-left: -10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #004AAD;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #003b87;
+}
+.esqueci-senha{
+    display: block;
+    text-align: center;
+    color: #888;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.esqueci-senha:hover{
+    text-decoration:underline;
+}
+@media (max-width: 768px){
+    .login-form {
+      width: 80%;
+    }
+}
+  
