@@ -63,8 +63,11 @@ class Routers {
             'LoginController',
             'AdministrativoController',
             'VacinaController',
+            'GestanteController',
+            'DentistaController',
+            'ConsultaController'
         ];
-        
+        //nomes das funçoes
         $allowedMethods = [
             'index',
             'auth',
@@ -72,7 +75,16 @@ class Routers {
             'getAllVacina',
             'addVacina',
             'updVacina',
-            'findById'
+            'findById',
+            'getAllConsulta',
+            'addConsulta',
+            'updConsulta',
+            'getAllDentista',
+            'addDentista',
+            'updDentista',
+            'getAllGestante',
+            'addGestante',
+            'updGestante'
         ];
 
         $controllerPath = $this->getControllerPath($this->controller);
