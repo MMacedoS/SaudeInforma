@@ -19,6 +19,11 @@ class Controller {
         require_once __DIR__ . "/../../Public/View/" . $view;
     }
 
+    public function viewAdmin($painel,$view, $page = "dashboard") 
+    {
+        require_once __DIR__ . "/../../Public/View/{$painel}/" . $view . ".php";
+    }
+
     public function prepareSite($view) 
     {
         require_once __DIR__ . "/../../Public/View/Site/" . $view . '.php';

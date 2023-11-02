@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tela Inicial</title>
     <link rel="stylesheet" href="<?=ROTA_GERAL?>/Public/Styles/css/style.css">
     <link
@@ -47,7 +47,7 @@
             <img src="<?=ROTA_GERAL?>/Public/Styles/assets/medica.png" alt="">
         </div>
         <div id="atendimentos">
-        <a href="../vacinas/index.html">
+        <a href="<?=ROTA_GERAL?>">
             <div class="caixas"><p>VACINAS</p>
                 <img class="img" src="<?=ROTA_GERAL?>/Public/Styles/assets/seringa.svg" alt="">
             </div>
@@ -66,6 +66,6 @@
             <p>Desenvolvido com &#x2665; por Prosub III & Proeja V</p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="<?=ROTA_GERAL?>/Public/Styles/js/script.js"></script>
 </body>
 </html>
