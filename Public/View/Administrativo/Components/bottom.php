@@ -90,6 +90,28 @@
     });
   }
 
+   // Função para atualizar um registro existente
+   function updateData(url, data) {
+    showLoader();
+    $.ajax({
+      url: url,
+      method: 'POST',
+      data: data,
+      dataType: 'JSON',
+      contentType: false,
+      cache: false,
+      processData:false,
+      success: function(response) {
+        showSuccessMessage('Registro atualizado com sucesso!');
+        hideLoader();
+      },
+      error: function(error) {
+        console.error('Erro ao atualizar registro:', error);
+        hideLoader();
+      }
+    });
+  }
+
   // Função para exibir um registro
   function showData(url) {
     showLoader();

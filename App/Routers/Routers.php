@@ -61,12 +61,18 @@ class Routers {
         $allowedControllers = [
             'SiteController', 
             'LoginController',
-            'AdministrativoController'
+            'AdministrativoController',
+            'VacinaController',
         ];
+        
         $allowedMethods = [
             'index',
             'auth',
-            'logouf'
+            'logouf',
+            'getAllVacina',
+            'addVacina',
+            'updVacina',
+            'findById'
         ];
 
         $controllerPath = $this->getControllerPath($this->controller);
