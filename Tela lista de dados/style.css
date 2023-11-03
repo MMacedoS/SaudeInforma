@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body *{
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+#container {
+    width: 100%;
+    height: 100vh;
+    max-width: 899px;
+    /* border: 1px solid red; */
+    margin: auto;
+
+}
+
+/* menu */
+#logo {
+    display: none;
+}
+#menu-mobile {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 20px;
+}
+#menu-mobile #barrinhas {
+    display: inline;
+    transform: rotate(-90deg);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    color: #004AAD;
+    cursor: pointer;
+
+}
+#menu-mobile h1 {
+    /* border: 1px solid red; */
+    color: #004AAD;
+}
+#menu-mobile #pesquisar {
+    display: none;
+}
+/* sidebar */
+
+#sidebar {
+    /* border: 1px solid rgb(255, 0, 208); */
+    height: 100%;
+    width: 50%;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+#sidebar #nav {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    border: 1px solid rgba(0, 74, 173, 0.20);
+    background: rgba(255, 255, 255, 0.95);
+
+}
+
+#sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sidebar ul li {
+    display: block;
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px solid #004AAD;
+    padding: 10px;
+}
+
+#sidebar a {
+    /* border: 1px solid rgb(157, 252, 165); */
+    color: #004AAD;
+    margin-bottom: 50px;
+    
+}
+
+#sidebar ul li a {
+    /* transition: background 0.3s; */
+    font-size: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+/* apresentação */
+
+#apresentacao {
+    background: url(assets/img-bg.png) no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+    height: 75px;
+}
+
+#apresentacao p {
+    /* border: 1px solid green; */
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#apresentacao img {
+    border: 1px solid red;
+}
+
+/* Atendimentos */
+#atendimentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px 0px 20px;
+
+}
+#atendimentos .card{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(200, 225, 255);
+    border-radius: 5%;
+    padding: 10px;
+    margin: 10px;
+}
+.card p {
+    color: #004AAD;
+}
+/* footer */
+#footer {
+    background: #164a93;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+
+}
+#footer p {
+    margin: 15px 0 0 0;
+}
+/* TELA DESKTOP */      
+
+@media (min-width: 768px) {
+    #container {
+        width: 100%;
+        height: 100vh;
+        max-width: 2000px;
+        /* border: 1px solid red; */
+        margin: auto;
+    }
+    /* menu */
+    #menu-mobile {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 40px;
+        padding: 0px;
+        width: 100%;
+        height: 112px;
+    }
+    #barrinhas {
+        display: none !important;
+    }
+    #menu-mobile #barrinhas {
+        display: none;
+    }
+    #logo {
+        display: block;
+        color: #004AAD;
+        font-family: "Inter";
+        font-size: 128px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    #menu-mobile h1 {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    #menu-mobile #nav-pc{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        float: right;
+        margin: 25px 0 0 50%;
+        font-weight: 500;
+    }
+    #menu-mobile #pesquisar {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        height: 51px;
+    }
+    #menu-mobile #pesquisar input {
+        width: 400px;
+        height: 51px;
+        text-align: center;
+        border-radius: 100px;
+        border: 1px solid #004AAD;
+        background: #FFF;
+        color: #004AAD;
+    }
+    #menu-mobile #nav-pc p {
+        margin: 20px;
+    }
+    #menu-mobile #nav-pc a{
+        color: #004AAD ;
+        padding: 10px;
+        text-decoration: none;
+    }
+    #lupa {
+        display: none;
+    }
+
+    /* apresentação */
+    
+    #apresentacao {
+        /* height: 500px; */
+    }
+    #apresentacao p {
+        margin: auto;
+
+    }
+    #apresentacao img {
+        /* border: 1px solid red; */
+        margin: auto;
+    }
+    /* Atendimentos (corpo) */
+    #atendimentos .card{
+        width: 350px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(200, 225, 255);
+        border-radius: 5%;
+        padding: 10px;
+        margin: 10px;
+    }
+    /* footer */
+
+    #footer {
+        background: #164a93;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+    }
+    #footer p {
+        margin: 15px 0 0 0;
+    }
+}
