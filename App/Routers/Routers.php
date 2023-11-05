@@ -37,9 +37,9 @@ class Routers {
 
             return;
         }
-        // // Redirecionar para a página de login
-        // $this->controller = 'LoginController';
-        // $this->method = 'index';
+        // Redirecionar para a página de login
+        $this->controller = 'SiteController';
+        $this->method = 'index';
     }
 
     public function run()
@@ -63,8 +63,11 @@ class Routers {
             'LoginController',
             'AdministrativoController',
             'VacinaController',
+            'GestanteController',
+            'DentistaController',
+            'ConsultaController'
         ];
-        
+        //nomes das funçoes
         $allowedMethods = [
             'index',
             'auth',
@@ -72,7 +75,21 @@ class Routers {
             'getAllVacina',
             'addVacina',
             'updVacina',
-            'findById'
+            'findById',
+            'getAllConsulta',
+            'addConsulta',
+            'updConsulta',
+            'getAllDentista',
+            'addDentista',
+            'updDentista',
+            'getAllGestante',
+            'addGestante',
+            'updGestante',
+            'vacinas',
+            'sobre',
+            'consultas',
+            'gestante',
+            'dentista',
         ];
 
         $controllerPath = $this->getControllerPath($this->controller);
