@@ -37,9 +37,9 @@ class Routers {
 
             return;
         }
-        // // Redirecionar para a página de login
-        // $this->controller = 'LoginController';
-        // $this->method = 'index';
+        // Redirecionar para a página de login
+        $this->controller = 'SiteController';
+        $this->method = 'index';
     }
 
     public function run()
@@ -84,7 +84,12 @@ class Routers {
             'updDentista',
             'getAllGestante',
             'addGestante',
-            'updGestante'
+            'updGestante',
+            'vacinas',
+            'sobre',
+            'consultas',
+            'gestante',
+            'dentista',
         ];
 
         $controllerPath = $this->getControllerPath($this->controller);

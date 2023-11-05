@@ -24,8 +24,14 @@
     <li class="sidebar-nav-item">
       <a class="dropdown-item " href="<?=ROTA_GERAL?>/Administrativo/index/vacinas">Vacinas</a>
     </li>
+    <li class="sidebar-nav-item">
+      <a class="dropdown-item " href="<?=ROTA_GERAL?>/Administrativo/index/consulta">Consultas</a>
+    </li>
+    <li class="sidebar-nav-item">
+      <a class="dropdown-item " href="<?=ROTA_GERAL?>/Administrativo/index/dentista">Dentista</a>
+    </li>
     <li class="sidebar-nav-item">      
-        <a class="dropdown-item" href="<?=ROTA_GERAL?>/Administrativo/consultas">Consultas</a>
+        <a class="dropdown-item" href="<?=ROTA_GERAL?>/Administrativo/index/gestante">Gestantes</a>
     </li>
   </ul>
 </nav>

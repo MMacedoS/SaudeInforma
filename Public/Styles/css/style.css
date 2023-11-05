@@ -21,7 +21,7 @@ body *{
 #menu-mobile {
     display: flex;
     position: relative;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
 }
 #menu-mobile #barrinhas {
@@ -54,6 +54,7 @@ body *{
 }
 #sidebar #nav {
     position: absolute;
+    z-index: 999 !important;
     display: none;
     flex-direction: column;
     border: 1px solid rgba(0, 74, 173, 0.20);
@@ -121,6 +122,9 @@ body *{
     gap: 20px;
     padding: 10px;
     margin-top: 25px;
+    height: 70vh !important;
+    position: relative;
+    overflow-y: scroll;
 }
 
 #atendimentos .caixas {
@@ -157,7 +161,11 @@ body *{
         margin: 15px 0 0 0;
     }
 
-/* TELA DESKTOP */      
+/* TELA DESKTOP */   
+
+#nav-pc {
+    display: none !important;
+}
 
 @media (min-width: 768px) {
     #container {
@@ -225,6 +233,11 @@ body *{
     #menu-mobile #nav-pc p {
         margin: 20px;
     }
+
+    #nav-pc {
+        display: flex !important;
+    }
+
     #menu-mobile #nav-pc a{
         color: #004AAD ;
         padding: 10px;

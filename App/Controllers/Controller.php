@@ -24,7 +24,7 @@ class Controller {
         require_once __DIR__ . "/../../Public/View/{$painel}/" . $view . ".php";
     }
 
-    public function prepareSite($view) 
+    public function prepareSite($view, $page = "home") 
     {
         require_once __DIR__ . "/../../Public/View/Site/" . $view . '.php';
     }
