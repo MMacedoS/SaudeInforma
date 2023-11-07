@@ -52,7 +52,7 @@
                 <?php if(!is_null($data)) {
                     foreach($data as $item) {
                     ?>
-                <div class="card">
+                <div class="card" onclick="redirect('<?=ROTA_GERAL?>/Site/vacinas/<?=$item['id']?>')">
                     <img src="<?=ROTA_GERAL?>/Public/Vacina/<?=$item['imagem']?>" alt="" width="150">
                     <p><?=$item['identificacao']?></p>
                 </div>

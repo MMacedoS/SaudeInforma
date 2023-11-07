@@ -1,12 +1,8 @@
 <?php
 
-require_once 'Trait/GeneralTrait.php';
-
 class VacinaController extends Controller{
     protected $vacinaModel;
     
-    use GeneralTrait;
-
     public function __construct() 
     {
         $this->vacinaModel = new VacinaModel();

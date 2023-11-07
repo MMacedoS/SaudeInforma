@@ -27,7 +27,7 @@ class VacinaModel extends Conexao {
           "SELECT * FROM campanha where id = $id"
         );
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function create($params) {

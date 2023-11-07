@@ -52,7 +52,7 @@
             <?php if(!is_null($data)) {
                     foreach($data as $item) {
                     ?>
-                <div class="card">
+                <div class="card" onclick="redirect('<?=ROTA_GERAL?>/Site/dentista/<?=$item['id']?>')">
                     <img src="<?=ROTA_GERAL?>/Public/Dentista/<?=$item['imagem']?>" alt="" width="150">
                     <p><?=$item['identificacao']?></p>
                 </div>
