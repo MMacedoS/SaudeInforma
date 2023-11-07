@@ -47,10 +47,13 @@ class ConsultaController extends Controller{
         $diretorio= __DIR__."../../../Public/Consulta";
         $cards = self::uploadFileWithHash('imagem', $diretorio);
        
-        if (is_null($cards)) {
-            echo json_encode("Error uploading");
-            return;
-        }
+        if (!empty($_FILES['imagem'])) {
+            $cards = self::uploadFileWithHash('imagem', $diretorio);
+        
+            if (is_null($cards)) {
+                $cards['imagem'] = $_POST['imagem_anterior'];
+            }
+        } 
         $cards['identificacao'] = $_POST['identificacao'];
         $cards['descricao'] = $_POST['descricao'];
         $cards['data_inicial'] = $_POST['data_inicial'];
