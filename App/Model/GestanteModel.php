@@ -27,7 +27,7 @@ class GestanteModel extends Conexao {
           "SELECT * FROM gestante where id = $id"
         );
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function create($params) {
@@ -37,12 +37,10 @@ class GestanteModel extends Conexao {
 
        try {
             $stmt = $this->conn->prepare(
-                "INSERT INTO gestante set 
-                id = :id, identificacao = :identificacao,
+                "INSERT INTO gestante set identificacao = :identificacao,
                 data_inicial = :data_inicial, data_final = :data_final,
                 descricao = :descricao, imagem = :imagem, local = :local"
             );
-            $stmt->bindValue(':id', $params['id']);
             $stmt->bindValue(':identificacao', $params['identificacao']);
             $stmt->bindValue(':data_inicial', $params['data_inicial']);
             $stmt->bindValue(':data_final', $params['data_final']);
@@ -66,13 +64,11 @@ class GestanteModel extends Conexao {
 
        try {
             $stmt = $this->conn->prepare(
-                "UPDATE gestante set 
-                id = :id, identificacao = :identificacao,
+                "UPDATE gestante set identificacao = :identificacao,
                 data_inicial = :data_inicial, data_final = :data_final,
                 descricao = :descricao, imagem = :imagem, local = :local 
                 where id = :id"
             );
-            $stmt->bindValue(':id', $params['id']);
             $stmt->bindValue(':identificacao', $params['identificacao']);
             $stmt->bindValue(':data_inicial', $params['data_inicial']);
             $stmt->bindValue(':data_final', $params['data_final']);

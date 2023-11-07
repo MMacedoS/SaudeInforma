@@ -49,28 +49,16 @@
             <p>CONSULTAS ODONTOLOGICAS</p>
     </div>
             <div id="atendimentos">
-                <div class="card">
-                    <img src="<?=ROTA_GERAL?>/Public/Styles/assets/upa-img.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <?php if(!is_null($data)) {
+                    foreach($data as $item) {
+                    ?>
+                <div class="card" onclick="redirect('<?=ROTA_GERAL?>/Site/dentista/<?=$item['id']?>')">
+                    <img src="<?=ROTA_GERAL?>/Public/Dentista/<?=$item['imagem']?>" alt="" width="150">
+                    <p><?=$item['identificacao']?></p>
                 </div>
-                <div class="card">
-                    <img src="<?=ROTA_GERAL?>/Public/Styles/assets/upa-img.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="card">
-                    <img src="<?=ROTA_GERAL?>/Public/Styles/assets/upa-img.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="card">
-                    <img src="<?=ROTA_GERAL?>/Public/Styles/assets/upa-img.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="card">
-                    <img src="<?=ROTA_GERAL?>/Public/Styles/assets/upa-img.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="card">
-                    <img src="<?=ROTA_GERAL?>/Public/Styles/assets/upa-img.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
+
+                <?php } ///fechamento for
+                
+            } //fechamento if
+                ?>
             </div>

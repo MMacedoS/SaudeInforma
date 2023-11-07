@@ -1,8 +1,9 @@
 <?php
 @session_start();
 
+require_once 'Trait/GeneralTrait.php';
 class Controller {
-    
+    use GeneralTrait;
     protected $url;
 
     public function __construct() {
@@ -24,7 +25,7 @@ class Controller {
         require_once __DIR__ . "/../../Public/View/{$painel}/" . $view . ".php";
     }
 
-    public function prepareSite($view, $page = "home") 
+    public function prepareSite($view, $page = "home", $data = null, $dir = null) 
     {
         require_once __DIR__ . "/../../Public/View/Site/" . $view . '.php';
     }
