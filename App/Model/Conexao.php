@@ -1,10 +1,10 @@
 <?php
 setlocale(LC_ALL,'pt_BR.utf8');
 date_default_timezone_set('America/Sao_Paulo');
-define('SERVIDOR','mysql');
+define('SERVIDOR','localhost');
 define('BANCO', 'saudeinforma');
 define('USUARIO', 'root');
-define('SENHA','12345');
+define('SENHA','');
 
 class Conexao{
     private $conexaoSql;

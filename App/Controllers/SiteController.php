@@ -1,6 +1,15 @@
 <?php
 
+require_once __DIR__ . "/../Model/VacinaModel.php";
+
 class SiteController extends Controller{
+
+    protected $vacinaModel;
+
+    public function __construct() {
+        $this->vacinaModel = new VacinaModel();
+    }
+
     public function index ($params = "home") 
     {
         $this->prepareSite('index',$params);
@@ -8,7 +17,8 @@ class SiteController extends Controller{
 
     public function vacinas ($params = "vacinas") 
     {
-        $this->prepareSite('index',$params);
+        $data = $this->vacinaModel->getAllVacina();
+        $this->prepareSite('index',$params, $data);
     }
 
     public function consultas ($params = "consultas") 

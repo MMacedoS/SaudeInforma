@@ -37,12 +37,10 @@ class DentistaModel extends Conexao {
 
        try {
             $stmt = $this->conn->prepare(
-                "INSERT INTO dentista set 
-                id = :id, identificacao = :identificacao,
+                "INSERT INTO dentista set identificacao = :identificacao,
                 data_inicial = :data_inicial, data_final = :data_final,
                 descricao = :descricao, imagem = :imagem, local = :local"
             );
-            $stmt->bindValue(':id', $params['id']);
             $stmt->bindValue(':identificacao', $params['identificacao']);
             $stmt->bindValue(':data_inicial', $params['data_inicial']);
             $stmt->bindValue(':data_final', $params['data_final']);
@@ -66,13 +64,11 @@ class DentistaModel extends Conexao {
 
        try {
             $stmt = $this->conn->prepare(
-                "UPDATE dentista set 
-                id = :id, identificacao = :identificacao,
+                "UPDATE dentista set identificacao = :identificacao,
                 data_inicial = :data_inicial, data_final = :data_final,
                 descricao = :descricao, imagem = :imagem, local = :local 
                 where id = :id"
             );
-            $stmt->bindValue(':id', $params['id']);
             $stmt->bindValue(':identificacao', $params['identificacao']);
             $stmt->bindValue(':data_inicial', $params['data_inicial']);
             $stmt->bindValue(':data_final', $params['data_final']);
