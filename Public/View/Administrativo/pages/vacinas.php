@@ -44,13 +44,13 @@
             <input type="text" class="form-control" name="descricao" id="descricao" required>
           </div>
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-xs-6">
                 <div class="mb-3">
                     <label for="data_inicio" class="form-label">Data Inicio</label>
                     <input type="date" name="data_inicial" id="data_inicial" class="form-control" required>
                 </div>          
             </div>
-            <div class="col-lg-6">
+            <div class="col-xs-6">
                 <div class="mb-3">
                     <label for="data_final" class="form-label">Data Final</label>
                     <input type="date" name="data_final" id="data_final" class="form-control" required>
